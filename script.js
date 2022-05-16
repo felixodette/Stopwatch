@@ -13,3 +13,10 @@ idText.addEventListener('click', () => {
 id2Text.addEventListener('click', () => {
   document.getElementById('id').textContent = "The getElementById works";
 });
+
+const addHello = document.querySelector('[data-btn-add-hello]');
+const textHello = document.querySelector('[data-hello-text]');
+
+addHello.addEventListener('click', () => {
+  textHello.textContent = textHello.textContent + " Hello";
+})
