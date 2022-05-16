@@ -19,4 +19,19 @@ const textHello = document.querySelector('[data-hello-text]');
 
 addHello.addEventListener('click', () => {
   textHello.textContent = textHello.textContent + " Hello";
-})
+});
+
+let s = 0;
+let counter;
+let startInterval = document.querySelector('[data-btn-interval]');
+let seconds = document.querySelector('[data-interval]');
+
+startInterval.addEventListener('click', () => {
+  if (!counter) {
+    counter = setInterval(runSeconds, 1000);
+  }
+  function runSeconds() {
+    seconds.textContent = s + 1;
+    s++;
+  }
+});
