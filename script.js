@@ -35,3 +35,11 @@ startInterval.addEventListener('click', () => {
     s++;
   }
 });
+
+const try_return = () => {
+  return "Testing return!"
+}
+
+document.querySelector('[data-btn-return]').addEventListener('click', () => {
+  document.querySelector('[data-txt-return]').textContent = try_return();
+})
